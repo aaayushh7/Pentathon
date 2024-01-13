@@ -12,35 +12,47 @@ body {
   place-items: center;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
-  font-family: 'Tektur', sans-serif;
+  font-family: 'Tektur', sans-serif;  
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(6.7px);
-  -webkit-backdrop-filter: blur(20px); */
-  background-color: black;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1); /* Fallback color for browsers that do not support backdrop-filter */
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(20px); /* For Safari */
+    background-color: rgba(0, 0, 0, 0.5); /* Fallback color for browsers that do not support backdrop-filter */
+    z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+      justify-content: center;
+      align-items: center;
+    }
+    .logo img {
+        width: 70px;
+        padding-top: 4px;
+        height: auto;
+    }
+  }
+
 .logo img {
-  width: 120px;
-  height: 80px;
+  max-width: 90px;
+  max-height: auto;
   margin-left: 30px;
+  padding-top: 4px;
 }
 
 .header-title {
   color: white;
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   flex-grow: 1;
   text-align: center;
   padding-right: 100px;
