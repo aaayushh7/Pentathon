@@ -33,9 +33,10 @@ body {
 
 .logo img {
     max-width: 90px;
-  max-height: auto;
+    max-height: auto;
     margin-left: 30px;
 }
+
 @media (max-width: 768px) {
     .logo img {
         width: 70px;
@@ -50,7 +51,8 @@ body {
     font-size: 1.5rem;
     flex-grow: 1;
     text-align: center;
-    padding-right: 55px;
+    padding-right: 45px;
+    padding-left: 20px;
     letter-spacing: 3px;
 }
 
@@ -239,11 +241,11 @@ main {
 @media (max-width: 650px) {
     .content {
         & .title {
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
 
         & .description {
-            font-size: 0.65rem;
+            font-size: 0.8rem;
         }
 
         & button {
