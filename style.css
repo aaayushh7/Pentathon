@@ -66,6 +66,7 @@ main {
   min-height: 100vh;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .title {
