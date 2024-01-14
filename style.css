@@ -276,6 +276,10 @@ main {
             display: none;
         }
     }
+
+     .nav {
+        padding-bottom: 50px;
+    }
 }
 
 .item {
