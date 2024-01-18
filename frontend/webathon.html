@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Register.Web()</h2>
+        <form id="registration-form">
+          <div class="user-box">
+            <input type="text" name="Name" required="">
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Registration no" required="">
+            <label>Register Number</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Department" required="">
+            <label>Department</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="SRMIST e-mail" required="">
+            <label>SRMIST e-mail</label>
+          </div>
+          <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <script>
+          function submitForm() {
+            var form = document.getElementById("registration-form");
+            var formData = new FormData(form);
+            
+            // Check if the entered email is from SRMIST
+            var srmistEmail = formData.get("SRMIST e-mail");
+            if (!isSRMISTEmail(srmistEmail)) {
+                alert("Please use a valid SRMIST email address.");
+                return;
+            }
+        
+            // Set the value of hackathon_type to "webathon"
+            formData.set("hackathon_type", "webathon");
+        
+            // Send a POST request to the Google Sheets script
+            fetch("https://script.google.com/macros/s/AKfycbxbbQi2Ikmgi12doDxqN04zqV4k2uDRQZVqJ6GeYn03Qo5n2wKT-IWs2tSScvOjzRe2Wg/exec", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log(data);
+                // Handle successful response, if needed
+            })
+            .catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
+                // Handle error, if needed
+            });
+        }
+        
+        function isSRMISTEmail(email) {
+            var srmistDomain = "srmist.edu.in";
+            return email.endsWith("@" + srmistDomain);
+        }
+        
+        
+        </script>
+      </div>
+</body>
+</html>
