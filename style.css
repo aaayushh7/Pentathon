@@ -698,15 +698,13 @@ html, body {
 }
 
 .body {
-  display: flex;
-  
+  display: flex; 
   height: 100%;
   align-items: center;
   justify-content: center;
-  
-  /* font-family: 'DM Sans', sans-serif; */
   transition: background .4s ease-in;
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: url('assets/mainBg.jpg') center/cover;
   
   &.blue {
     background-color: #428aa6;
@@ -780,7 +778,7 @@ img {
   background-color: #fff;
   border-radius: 8px;
   min-width: 520px;
-  height: 195pX;
+  height: 215pX;
   padding: 16px 16px;
   overflow: hidden;
   background: url('assets/olga-thelavart-vS3idIiYxX0-unsplash.jpg');
@@ -927,8 +925,8 @@ img {
 
   .footer {
     position: relative;
-    background: black;
     border: 2px solid white;
+    background: black;
     min-height: 100px;
     padding: 0;
     display: flex;
