@@ -49,14 +49,38 @@
 .new-section {
     height: 100vh;
     width: 100%;
-    background: url('assets/mainBg.jpg') center/cover;
+    /* background: url('assets/mainBg.jpg') center/cover; */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('assets/mainBg.jpg');
+    background-size:cover;
+          -webkit-animation: slidein 100s;
+          animation: slidein 100s;
+  
+          -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  
+          -webkit-animation-direction: alternate;
+          animation-direction: alternate;  
 }
 
+@-webkit-keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    }
+    
+    @keyframes slidein {
+    from {background-position: top;background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+    
+    }
+    
 .new-section h2 {
     text-align: center;
     display: flex;
@@ -703,12 +727,8 @@ html, body {
   align-items: center;
   justify-content: center;
   transition: background .4s ease-in;
-  /* background-color: #000000; */
-  background: url('assets/mainBg.jpg') center/cover;
-  
-  &.blue {
-    background-color: #428aa6;
-  }
+  background-color: #000000;           
+
 }
 
 input[type=radio] {
@@ -974,5 +994,3 @@ img {
   }
   
   
-
-
