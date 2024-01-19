@@ -632,5 +632,24 @@ main {
 }
 
 
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    60%, 40% {
+      transform: translateY(-20px) rotate(-5deg);
+    }
+    70%, 30% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+  }
+  
+  .image-link {
+    animation: bounce 2s ease infinite;
+  }
+
 
 
