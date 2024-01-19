@@ -1,3 +1,5 @@
+// slider
+
 const slider = document.querySelector('.slider');
 
 function activate(e) {
@@ -8,10 +10,21 @@ function activate(e) {
 
 document.addEventListener('click', activate, false);
 
-  
+
+// register scroll
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var registerButton = document.getElementById("registerBtn");
+
+    var mainSection = document.getElementById("mainSection");
+
+    registerButton.addEventListener("click", function() {
+      mainSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
 
 
-
+// dj page
 
   document.addEventListener('DOMContentLoaded', function () {
     var popup = document.getElementById('popup');
@@ -45,15 +58,17 @@ document.addEventListener('click', activate, false);
 });
 
 
+// about scroll
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var aboutEventButton = document.querySelector(".custom-button1");
+
+    var aboutEventSection = document.querySelector(".section-1");
+
+    aboutEventButton.addEventListener("click", function() {
+      aboutEventSection.scrollIntoView({ behavior: "smooth" });
+    });
+  });
 
 
-
-
-
-
-
-
-
-  
