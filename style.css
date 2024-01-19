@@ -928,6 +928,7 @@ img {
   .footer {
     position: relative;
     background: black;
+    border: 2px solid white;
     min-height: 100px;
     padding: 0;
     display: flex;
