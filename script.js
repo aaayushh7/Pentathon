@@ -64,7 +64,7 @@ document.addEventListener('click', activate, false);
   document.addEventListener("DOMContentLoaded", function() {
     var aboutEventButton = document.querySelector(".custom-button1");
 
-    var aboutEventSection = document.querySelector(".section-1");
+    var aboutEventSection = document.querySelector(".container");
 
     aboutEventButton.addEventListener("click", function() {
       aboutEventSection.scrollIntoView({ behavior: "smooth" });
