@@ -34,13 +34,27 @@
     <div class="btns">
       <button class="custom-button1">About Event</button>
       <button id="registerBtn" class="custom-button1">Register</button>
-      <a href="#your-section-id" class="image-link">
-        <img src="assets/giftbox.png" alt="Your Image Alt Text">
+      <div id="giftIcon" class="image-link">
+        <img src="assets/giftbox.png" alt="Gift Icon">
         <div class="tooltip">Click for a Surprise</div>
-      </a>
+    </div>
     </div>
   </div>
   </section>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" id="close">&times;</span>
+        <video id="popupVideo" autoplay muted loop>
+            <source src="assets/DiscoLights2Videvo.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>NGAI Presents Open DJ Night for all participants</h1>
+        <p>Get ready to let loose and celebrate with NGAI as we wrap up our incredible technical event with a bang! Join us for an unforgettable Open DJ Night exclusively for all participants. It's time to unwind, groove to the beats, and make lasting memories with your fellow tech enthusiasts.</p>
+    </div>
+</div>
+
+  
 
   <section class="section-1">
     <div class="about">
@@ -101,15 +115,6 @@
       <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
     </nav>
   </main>
-
-  <div class="jerry">
-    <div id="canvas-container">
-      <div class="text-overlay">CINTEL'S NEXT GEN-AI PRESENTS OPEN DJ NIGHT<div id="overlay2">FOR ALL PARTICIPANTS</div></div>
-      <div id="canvas"></div>
-    </div>
-    </div>
-    <script src="https://threejs.org/build/three.js"></script>
-    <script src="djscript.js"></script>
 
   <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
