@@ -1,4 +1,4 @@
-const slider = document.querySelector('.slider');
+// const slider = document.querySelector('.slider');
 const webhookUrl = 'https://discord.com/api/webhooks/1196466976034410527/kEVE1A5xSMbMuCuLfX9MiQWAAWyWTPpGdAKPmlO27JFJ4pcfUav4Eu6y484h8rvfJ1zR';
 
 function activate(e) {
