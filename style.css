@@ -1044,3 +1044,22 @@ img {
 html {
     overflow: auto !important;
 }
+
+
+
+  
+  .scroll-to-top-button {
+	background: #222;
+	color: white;
+	text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+	border-radius: 5px;
+	opacity: 1;
+	transition: .2s opacity ease-in-out;
+    z-index: 1000;
+  }
+  
