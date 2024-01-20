@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="login-box">
+      <h2>Register.User()</h2>
+      <form>
+        <div class="user-box">
+          <input type="text" name="name" required="">
+          <label>Name</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="registerNumber" required="">
+          <label>Register Number</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="department" required="">
+          <label>Department</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="email" required="">
+          <label>SRMIST e-mail</label>
+        </div>
+      <div class="checkboxes">
+        <div class="checkbox-wrapper-57">
+          <label class="container">
+            <input type="checkbox" id="appCheckbox">
+            <div class="checkmark"></div>
+          </label>
+          <p style="color: azure; font-size: 14px;">APP</p>
+        </div>
+        <div class="checkbox-wrapper-57">
+          <label class="container">
+            <input type="checkbox" id="webCheckbox">
+            <div class="checkmark"></div>
+          </label>
+          <p style="color: azure; font-size: 14px;">WEB</p>
+        </div>
+        <div class="checkbox-wrapper-57">
+          <label class="container">
+            <input type="checkbox">
+            <div class="checkmark"></div>
+          </label>
+          <p style="color: azure; font-size: 14px;">DATA</p>
+        </div>
+        <div class="checkbox-wrapper-57">
+          <label class="container">
+            <input type="checkbox">
+            <div class="checkmark"></div>
+          </label>
+          <p style="color: azure; font-size: 14px;">IDEA</p>
+        </div>
+        <div class="checkbox-wrapper-57">
+          <label class="container">
+            <input type="checkbox">
+            <div class="checkmark"></div>
+          </label>
+          <p style="color: azure; font-size: 14px;">HackStr</p>
+        </div>
+      </div>
+        
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+    </div>
+
+    <script>
+  
+  const appCheckbox = document.getElementById('appCheckbox');
+  const webCheckbox = document.getElementById('webCheckbox');
+
+  // Add event listener to the "APP" checkbox
+  appCheckbox.addEventListener('change', function () {
+    // Check if "APP" checkbox is checked
+    if (appCheckbox.checked) {
+      // disabling the "WEB" checkbox
+      webCheckbox.disabled = true;
+      // Display an alert
+      alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
+    } else {
+      // If unchecked, enable the "WEB" checkbox
+      webCheckbox.disabled = false;
+    }
+  });
+
+  // Add event listener to the "WEB" checkbox
+  webCheckbox.addEventListener('change', function () {
+    // Check if "WEB" checkbox is checked
+    if (webCheckbox.checked) {
+      // If checked, disable the "APP" checkbox
+      appCheckbox.disabled = true;
+      // Display an alert
+      alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
+    } else {
+      // If unchecked, enable the "APP" checkbox
+      appCheckbox.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
