@@ -43,21 +43,21 @@
         </div>
         <div class="checkbox-wrapper-57">
           <label class="container">
-            <input type="checkbox">
+            <input type="checkbox" id="dataCheckbox">
             <div class="checkmark"></div>
           </label>
           <p style="color: azure; font-size: 14px;">DATA</p>
         </div>
         <div class="checkbox-wrapper-57">
           <label class="container">
-            <input type="checkbox">
+            <input type="checkbox" id="ideaCheckbox">
             <div class="checkmark"></div>
           </label>
           <p style="color: azure; font-size: 14px;">IDEA</p>
         </div>
         <div class="checkbox-wrapper-57">
           <label class="container">
-            <input type="checkbox">
+            <input type="checkbox" id="hackCheckbox">
             <div class="checkmark"></div>
           </label>
           <p style="color: azure; font-size: 14px;">HackStr</p>
@@ -83,8 +83,27 @@
   appCheckbox.addEventListener('change', function () {
     
     if (appCheckbox.checked) {
+      dataCheckbox.disabled = true;
+      alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
+    } else {
+      dataCheckbox.disabled = false;
+    }
+  });
+
+  // checkbox-WEB
+  dataCheckbox.addEventListener('change', function () {
+    if (webCheckbox.checked) {
+      appCheckbox.disabled = true;
+      alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
+    } else {
+      appCheckbox.disabled = false;
+    }
+  });
+  hackCheckbox.addEventListener('change', function () {
+    
+    if (hackCheckbox.checked) {
       webCheckbox.disabled = true;
-      alert("You can only join either 'APP' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
+      alert("You can only join either 'HackStreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
     } else {
       webCheckbox.disabled = false;
     }
@@ -93,12 +112,13 @@
   // checkbox-WEB
   webCheckbox.addEventListener('change', function () {
     if (webCheckbox.checked) {
-      appCheckbox.disabled = true;
-      alert("You can only join either 'APP' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
+      hackCheckbox.disabled = true;
+      alert("You can only join either 'Hackstreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
     } else {
-      appCheckbox.disabled = false;
+      hackCheckbox.disabled = false;
     }
   });
+
 </script>
 </body>
 </html>
