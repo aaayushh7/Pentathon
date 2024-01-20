@@ -84,7 +84,7 @@
     
     if (appCheckbox.checked) {
       webCheckbox.disabled = true;
-      alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
+      alert("You can only join either 'APP' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
     } else {
       webCheckbox.disabled = false;
     }
@@ -94,7 +94,7 @@
   webCheckbox.addEventListener('change', function () {
     if (webCheckbox.checked) {
       appCheckbox.disabled = true;
-      alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
+      alert("You can only join either 'APP' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
     } else {
       appCheckbox.disabled = false;
     }
