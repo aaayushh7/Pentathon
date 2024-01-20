@@ -79,30 +79,23 @@
   const appCheckbox = document.getElementById('appCheckbox');
   const webCheckbox = document.getElementById('webCheckbox');
 
-  // Add event listener to the "APP" checkbox
+  //checkbox-APP
   appCheckbox.addEventListener('change', function () {
-    // Check if "APP" checkbox is checked
+    
     if (appCheckbox.checked) {
-      // disabling the "WEB" checkbox
       webCheckbox.disabled = true;
-      // Display an alert
       alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
     } else {
-      // If unchecked, enable the "WEB" checkbox
       webCheckbox.disabled = false;
     }
   });
 
-  // Add event listener to the "WEB" checkbox
+  // checkbox-WEB
   webCheckbox.addEventListener('change', function () {
-    // Check if "WEB" checkbox is checked
     if (webCheckbox.checked) {
-      // If checked, disable the "APP" checkbox
       appCheckbox.disabled = true;
-      // Display an alert
       alert("You can't select 'WEB' and 'APP' both, Be sure of your choice <3");
     } else {
-      // If unchecked, enable the "APP" checkbox
       appCheckbox.disabled = false;
     }
   });
