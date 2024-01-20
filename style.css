@@ -1069,7 +1069,7 @@ img {
     }
 
     .footer {
-        flex-direction: row;
+        display:inline-block
     }
 
     .footer h1{
@@ -1085,6 +1085,20 @@ img {
         margin: 0;
         margin-bottom: 10px;
     }
+    
+    .footimg img {
+        width: 20%;
+    }
+    
+    .footimg {
+        
+        justify-content:center;
+        align-items: center;
+    }
+    .pen{
+        display: none;
+    }
+    
 
 }
 
