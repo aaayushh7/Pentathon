@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./frontend/style.css">
+  <link rel="stylesheet" href="./mediaqueries.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+
   <title>Pentathon</title>
 </head>
 
@@ -15,50 +21,180 @@
     </div>
     <h1 class="header-title">PENTATHON</h1>
   </header>
+
+  <section class="new-section">
+    <div class="border">
+      <div class="main-img">
+        <div class="logo1">
+          <img src="./frontend/assets/logo1.png" alt="logo">
+        </div>
+        <h1 class="x"> &nbsp; X &nbsp;</h1>
+        <div class="logo2">
+          <img src="./frontend/assets/Bajaj_Auto_Ltd_logo.svg.png" alt="logo">
+        </div>
+      </div>
+      <p> <b>A COLLABORATION LIKE NEVER BEFORE! <br><br> NEXT GEN-AI X BAJAJ PROUDLY PRESENTS </b> </p>
+      <div id="glitch">
+        <h1>PENTATHON</h1>
+        <h1>PENTATHON</h1>
+        <h1>PENTATHON</h1>
+      </div>
+      <!-- <h1 >PENTATHON</h1> -->
+      <div class="btns">
+        <button class="custom-button1">About Event</button>
+        <button id="registerBtn" class="custom-button1">Register</button>
+        <div id="giftIcon" class="image-link bounce">
+          <img src="./frontend/assets/giftbox.png" alt="Gift Icon">
+          <div class="tooltip">Click for a Surprise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close" id="close">&times;</span>
+      <video id="popupVideo" autoplay muted loop>
+        <source src="./frontend/assets/DiscoLights2Videvo.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h1>NGAI Presents Open DJ Night for all participants</h1>
+      <p>Get ready to let loose and celebrate with NGAI as we wrap up our incredible technical event with a bang! Join
+        us for an unforgettable Open DJ Night exclusively for all participants. It's time to unwind, groove to the
+        beats, and make lasting memories with your fellow tech enthusiasts.</p>
+    </div>
+  </div>
+
+
+  <div class="body ">
+    <div class="container">
+      <h1>Dive into Pentathon with Next Gen-AI and Bajaj</h1>
+      <input type="radio" name="slider" id="item-1" checked>
+      <input type="radio" name="slider" id="item-2">
+      <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <img
+            src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80"
+            alt="song">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <img
+            src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
+            alt="song">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <img
+            src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+            alt="song">
+        </label>
+      </div>
+      <div class="player">
+        <div class="upper-part">
+
+          <div class="info-area" id="test">
+            <label class="song-info" id="song-info-1">
+              <div class="title"> <b>Next Gen AI</b></div>
+              <div class="sub-line ">
+                <div class="subtitle">
+                  Next Gen-AI, pioneering the future of artificial intelligence, presents Pentathon – our flagship event
+                  in collaboration with Bajaj. As a dynamic hub of tech enthusiasts and visionaries, join us on this
+                  exciting journey of discovery. Pentathon unfolds with five thrilling events, showcasing the limitless
+                  potential of AI and redefining the future of tech. </div>
+
+              </div>
+            </label>
+            <label class="song-info" id="song-info-2">
+              <div class="title"><b>BAJAJ</b></div>
+              <div class="sub-line">
+                <div class="subtitle">
+                  Bajaj, a trailblazer in the industry, fuels our tech journey with cutting-edge expertise. With a
+                  legacy of innovation, Bajaj joins forces with Next Gen-AI to elevate Pentathon into a realm of
+                  unparalleled excitement and technological brilliance. Get ready to ride the wave of future
+                  possibilities!
+                </div>
+
+              </div>
+            </label>
+            <label class="song-info" id="song-info-3">
+              <div class="title"><b>PENTATHON</b></div>
+              <div class="sub-line">
+                <div class="subtitle">
+                  Dive into the tech extravaganza of Pentathon - where ideas ignite in Hack Street 2.0, data dances in
+                  Datathon, creativity unfolds in Webathon, innovation soars in Appathon, and dreams take center stage
+                  in Ideathon. Unleash your potential in five thrilling events that define the future of technology!
+                </div>
+
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="mainSection"></div>
   <main>
+    <h1>Enlist for Pentathon Glory</h1>
     <ul class='slider'>
-      <li class='item' style="background-image: url('assets/ideathon.jpg')">
+      <li class='item' style="background-image: url('./frontend/assets/ideathon.jpg')">
         <div class='content'>
           <h2 class='title'>IDEATHON</h2>
-          <p class='description'> Ignite your imagination in the Ideathon! Let your ideas soar as you brainstorm, innovate, and pitch groundbreaking solutions to real-world challenges. Transform your visions into concepts that have the power to shape the future. </p>
+          <p class='date'>16th February, 2024</p>
+          <p class='description'> Ignite your imagination in the Ideathon! Let your ideas soar as you brainstorm,
+            innovate, and pitch groundbreaking solutions to real-world challenges. Transform your visions into concepts
+            that have the power to shape the future. </p>
           <a href="./frontend/data.html">
-          <button id="mybtn" class="custom-button">Register</button></a>
+            <button class="custom-button">Register</button></a>
         </div>
       </li>
-      <li class='item' style="background-image: url('assets/hacker.jpg')">
+      <li class='item' style="background-image: url('./frontend/assets/hacker.jpg')">
         <div class='content'>
           <h2 class='title'>HACK STREET 2.0</h2>
-          <p class='description'> Join the hacking extravaganza in Hack Street 2.0! Engage in friendly cybersecurity challenges, penetration testing, and ethical hacking. Sharpen your hacking skills while emphasizing the importance of cybersecurity in today's digital landscape. May the best hacker prevail! </p>
+          <p class='date'>16th February, 2024</p>
+          <p class='description'> Join the hacking extravaganza in Hack Street 2.0! Engage in friendly cybersecurity
+            challenges, penetration testing, and ethical hacking. Sharpen your hacking skills while emphasizing the
+            importance of cybersecurity in today's digital landscape. May the best hacker prevail! </p>
           <a href="./frontend/data.html">
-          <button id="mybtn" class="custom-button">Register</button></a>
+            <button class="custom-button">Register</button></a>
         </div>
       </li>
-      <li class='item' style="background-image: url('assets/datathon.jpg')">
+      <li class='item' style="background-image: url('./frontend/assets/datathon.jpg')">
         <div class='content'>
           <h2 class='title'>DATATHON</h2>
-          <p class='description'> Crunch the numbers and unlock insights in the Datathon. Analyze datasets, unravel patterns, and derive meaningful conclusions. Showcase your data analytics skills as you tackle real-world problems with data-driven solutions. </p>
+          <p class='date'>16th February, 2024</p>
+          <p class='description'> Crunch the numbers and unlock insights in the Datathon. Analyze datasets, unravel
+            patterns, and derive meaningful conclusions. Showcase your data analytics skills as you tackle real-world
+            problems with data-driven solutions. </p>
           <a href="./frontend/data.html">
-          <button id="mybtn" class="custom-button">Register</button></a>
+            <button class="custom-button">Register</button></a>
         </div>
       </li>
-      <li class='item' style="background-image: url('assets/webathon.jpg')">
+      <li class='item' style="background-image: url('./frontend/assets/webathon.jpg')">
         <div class='content'>
           <h2 class='title'>WEBATHON</h2>
+          <p class='date'>16th February, 2024</p>
           <p class='description'>
-            Dive into the world of web development in this adrenaline-pumping event. Craft captivating and functional websites under the ticking clock, showcasing your coding prowess and design finesse. Unleash your creativity and watch your web masterpiece come to life!
+            Dive into the world of web development in this adrenaline-pumping event. Craft captivating and functional
+            websites under the ticking clock, showcasing your coding prowess and design finesse. Unleash your creativity
+            and watch your web masterpiece come to life!
           </p>
           <a href="./frontend/data.html">
-          <button id="mybtn" class="custom-button">Register</button></a>
+            <button class="custom-button">Register</button></a>
         </div>
       </li>
-      <li class='item' style="background-image: url('assets/APPATHON.jpg')">
+      <li class='item' style="background-image: url('./frontend/assets/APPATHON.jpg')">
         <div class='content'>
           <h2 class='title'>APPATHON</h2>
+          <p class='date'>16th February, 2024</p>
           <p class='description'>
-            Get ready to code your way into the Appathon! Develop innovative mobile applications that push the boundaries of technology. From concept to execution, demonstrate your programming prowess and create apps that leave a lasting impact.
+            Get ready to code your way into the Appathon! Develop innovative mobile applications that push the
+            boundaries of technology. From concept to execution, demonstrate your programming prowess and create apps
+            that leave a lasting impact.
           </p>
           <a href="./frontend/data.html">
-          <button id="mybtn" class="custom-button"> Register </button></a>
+            <button class="custom-button"> Register </button></a>
         </div>
       </li>
     </ul>
@@ -68,10 +204,40 @@
     </nav>
   </main>
 
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+    </div>
+    <div class="footimg">
+      <img src="./frontend/assets/logo1.png" alt="">
+    </div>
+    <h1 class="pen">PENTATHON</h1>
+    <p>&copy;2024 NGAI | All Rights Reserved</p>
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-github"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link"
+          href="https://www.linkedin.com/company/cintels-next-gen-ai/mycompany/">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/next_gen.ai/">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script src="script.js"></script>
   <script src="./frontend/script.js"></script>
+  <script src="about.js"></script>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <a class="scroll-to-top-button" href="#top">&#9650;</a>
 </body>
 
 </html>
