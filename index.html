@@ -10,11 +10,54 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css">
+  <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
 
   <title>Pentathon</title>
 </head>
+<style>
+  .spinner {
+   background-color: rgb(36, 37, 42) !important;
+   opacity: 1;
+   position: fixed;
+   align-items: center;
+   display: flex;
+   height: 100vh;
+   left: 0;
+   right: 0;
+   top: 0;
+   justify-content: center;
+   width: 100%;
+   transition: opacity 0.5s ease-out;
+   z-index: 90;
+ }
+
+ .hide {
+   opacity: 0;
+   
+ }
+</style>
+
+<script>
+ setTimeout(function() {
+   var spinner = document.getElementById('spinner');
+   spinner.classList.add('hide');
+ 
+   setTimeout(function() {
+     spinner.style.display = 'none';
+   }, 1000);
+ }, 5000);
+ 
+</script>
 
 <body>
+  <div id="spinner" class="spinner">
+    <!-- <img src="ld2.gif" /> -->
+  
+<dotlottie-player autoplay loop mode="normal"
+      src="./frontend/assets/fin.lottie"
+      style="width: 320px;height:320px;"></dotlottie-player>
+
+  </div>
   <header class="navbar">
     <div class="logo">
       <img src="./frontend/assets/logo1.png" alt="logo">
