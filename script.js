@@ -74,3 +74,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   aboutEventButton.addEventListener("click", scrollToAboutEventSection);
 });
+
+
+
+
+$(document).ready(function () {
+  var scrollToTopButton = $('.scroll-to-top-button');
+
+  function scrollToTop() {
+    var scrollProgress = $(document).scrollTop();
+    scrollToTopButton.toggleClass('visible', scrollProgress > 100);
+  }
+
+  scrollToTopButton.on('click', function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  });
+
+  $(document).on('scroll', scrollToTop);
+});
+
+
