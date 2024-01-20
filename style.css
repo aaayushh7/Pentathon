@@ -292,6 +292,7 @@
     z-index: 999; /* Set a high z-index value */
     scroll-behavior: no;
 }
+
 .popup-content {
     width: 50%;
     height: 50%;
@@ -339,6 +340,7 @@
     z-index: -1;
 }
 
+
 @media (max-width: 768px) {
     .popup-content {
         width: 80%;
@@ -358,6 +360,7 @@
         margin-top: 10px;
     }
 }
+
 
 
 /* about  */
@@ -733,8 +736,27 @@ body {
     width: 100%;
     margin: 0;
     height: 100%;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    background: #6d6d6d; 
+}
+
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .body {
@@ -1016,4 +1038,9 @@ img {
 
 .footimg img {
     width: 32%;
+}
+
+
+html {
+    overflow: auto !important;
 }
