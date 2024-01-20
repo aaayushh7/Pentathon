@@ -281,7 +281,7 @@
 
 .popup {
     display: none;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -289,6 +289,8 @@
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 999; /* Set a high z-index value */
+    scroll-behavior: no;
 }
 .popup-content {
     width: 50%;
