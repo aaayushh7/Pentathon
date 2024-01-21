@@ -53,10 +53,10 @@ body {
 
 .login-box {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 50%;
   width: 400px;
-  height: 130%;
+  /* height: 130%; */
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, .5);
