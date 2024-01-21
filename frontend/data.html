@@ -1,124 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="register.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
-  <div class="login-box">
-      <h2>Register.User()</h2>
-      <form>
-        <div class="user-box">
-          <input type="text" name="name" required="">
-          <label>Name</label>
-        </div>
-        <div class="user-box">
-          <input type="text" name="registerNumber" required="">
-          <label>Register Number</label>
-        </div>
-        <div class="user-box">
-          <input type="text" name="department" required="">
-          <label>Department</label>
-        </div>
-        <div class="user-box">
-          <input type="text" name="email" required="">
-          <label>SRMIST e-mail</label>
-        </div>
-      <div class="checkboxes">
-        <div class="checkbox-wrapper-57">
-          <label class="container">
-            <input type="checkbox" id="appCheckbox">
-            <div class="checkmark"></div>
-          </label>
-          <p style="color: azure; font-size: 14px;">APP</p>
-        </div>
-        <div class="checkbox-wrapper-57">
-          <label class="container">
-            <input type="checkbox" id="webCheckbox">
-            <div class="checkmark"></div>
-          </label>
-          <p style="color: azure; font-size: 14px;">WEB</p>
-        </div>
-        <div class="checkbox-wrapper-57">
-          <label class="container">
-            <input type="checkbox" id="dataCheckbox">
-            <div class="checkmark"></div>
-          </label>
-          <p style="color: azure; font-size: 14px;">DATA</p>
-        </div>
-        <div class="checkbox-wrapper-57">
-          <label class="container">
-            <input type="checkbox" id="ideaCheckbox">
-            <div class="checkmark"></div>
-          </label>
-          <p style="color: azure; font-size: 14px;">IDEA</p>
-        </div>
-        <div class="checkbox-wrapper-57">
-          <label class="container">
-            <input type="checkbox" id="hackCheckbox">
-            <div class="checkmark"></div>
-          </label>
-          <p style="color: azure; font-size: 14px;">HackStr</p>
-        </div>
-      </div>
-        
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Submit
-        </a>
-      </form>
+    <div class="login-box">
+        <h2>Register.User()</h2>
+        <form>
+            <ul class="tab-group">
+                <li class="tab active"><a href="#Team">Team.join</a></li>
+                <li class="tab" id="in"><a href="#unique">Unique()</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="unique">
+                    <div class="user-box">
+                        <input type="text" name="name" required="">
+                        <label>Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="registerNumber" required="">
+                        <label>Register Number</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="department" required="">
+                        <label>Department</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="email" required="">
+                        <label>SRMIST e-mail</label>
+                    </div>
+                    <div class="checkboxes">
+                        <div class="checkbox-wrapper-57">
+                            <label class="container">
+                                <input type="checkbox" id="appCheckbox">
+                                <div class="checkmark"></div>
+                            </label>
+                            <p style="color: azure; font-size: 14px;">APP</p>
+                        </div>
+                        <div class="checkbox-wrapper-57">
+                            <label class="container">
+                                <input type="checkbox" id="webCheckbox">
+                                <div class="checkmark"></div>
+                            </label>
+                            <p style="color: azure; font-size: 14px;">WEB</p>
+                        </div>
+                        <div class="checkbox-wrapper-57">
+                            <label class="container">
+                                <input type="checkbox" id="dataCheckbox">
+                                <div class="checkmark"></div>
+                            </label>
+                            <p style="color: azure; font-size: 14px;">DATA</p>
+                        </div>
+                        <div class="checkbox-wrapper-57">
+                            <label class="container">
+                                <input type="checkbox" id="ideaCheckbox">
+                                <div class="checkmark"></div>
+                            </label>
+                            <p style="color: azure; font-size: 14px;">IDEA</p>
+                        </div>
+                        <div class="checkbox-wrapper-57">
+                            <label class="container">
+                                <input type="checkbox" id="hackCheckbox">
+                                <div class="checkmark"></div>
+                            </label>
+                            <p style="color: azure; font-size: 14px;">HackStr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="Team">
+                    <div class="user-box">
+                        <input type="text" name="name" required="">
+                        <label>Team.Lead()</label>
+                    </div>
+                    <div class="user-box">
+                      <input type="text" name="name" required="">
+                      <label>Team.ally1()</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="name" required="">
+                    <label>Team.ally2()</label>
+                </div>
+                    <div class="user-box">
+                        <input type="text" name="registerNumber" required="">
+                        <label>RAnum.lead()</label>
+                    </div>
+                    <div class="user-box">
+                      <input type="text" name="registerNumber" required="">
+                      <label>RAnum.ally1()</label>
+                  </div>
+                  <div class="user-box">
+                    <input type="text" name="registerNumber" required="">
+                    <label>RAnum.ally2()</label>
+                </div>
+                    <div class="user-box">
+                        <input type="text" name="department" required="">
+                        <label>Team name</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" name="email" required="">
+                        <label>SRMIST e-mail</label>
+                    </div>
+                    <div class="checkboxes">
+                      <div class="checkbox-wrapper-57">
+                          <label class="container">
+                              <input type="checkbox" id="appCheckbox">
+                              <div class="checkmark"></div>
+                          </label>
+                          <p style="color: azure; font-size: 14px;">APP</p>
+                      </div>
+                      <div class="checkbox-wrapper-57">
+                          <label class="container">
+                              <input type="checkbox" id="webCheckbox">
+                              <div class="checkmark"></div>
+                          </label>
+                          <p style="color: azure; font-size: 14px;">WEB</p>
+                      </div>
+                      <div class="checkbox-wrapper-57">
+                          <label class="container">
+                              <input type="checkbox" id="dataCheckbox">
+                              <div class="checkmark"></div>
+                          </label>
+                          <p style="color: azure; font-size: 14px;">DATA</p>
+                      </div>
+                      <div class="checkbox-wrapper-57">
+                          <label class="container">
+                              <input type="checkbox" id="ideaCheckbox">
+                              <div class="checkmark"></div>
+                          </label>
+                          <p style="color: azure; font-size: 14px;">IDEA</p>
+                      </div>
+                      <div class="checkbox-wrapper-57">
+                          <label class="container">
+                              <input type="checkbox" id="hackCheckbox">
+                              <div class="checkmark"></div>
+                          </label>
+                          <p style="color: azure; font-size: 14px;">HackStr</p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+        </form>
     </div>
 
     <script>
-  
-  const appCheckbox = document.getElementById('appCheckbox');
-  const webCheckbox = document.getElementById('webCheckbox');
+        $(document).ready(function () {
+            $('.tab-group a').on('click', function (e) {
 
-  //checkbox-APP
-  appCheckbox.addEventListener('change', function () {
-    
-    if (appCheckbox.checked) {
-      dataCheckbox.disabled = true;
-      alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
-    } else {
-      dataCheckbox.disabled = false;
-    }
-  });
+                e.preventDefault();
 
-  // checkbox-WEB
-  dataCheckbox.addEventListener('change', function () {
-    if (webCheckbox.checked) {
-      appCheckbox.disabled = true;
-      alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
-    } else {
-      appCheckbox.disabled = false;
-    }
-  });
-  hackCheckbox.addEventListener('change', function () {
-    
-    if (hackCheckbox.checked) {
-      webCheckbox.disabled = true;
-      alert("You can only join either 'HackStreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
-    } else {
-      webCheckbox.disabled = false;
-    }
-  });
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
 
-  // checkbox-WEB
-  webCheckbox.addEventListener('change', function () {
-    if (webCheckbox.checked) {
-      hackCheckbox.disabled = true;
-      alert("You can only join either 'Hackstreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
-    } else {
-      hackCheckbox.disabled = false;
-    }
-  });
+                target = $(this).attr('href');
 
-</script>
+                $('.tab-content > div').not(target).hide();
+
+                $(target).fadeIn(600);
+
+            });
+        });
+
+        const appCheckbox = document.getElementById('appCheckbox');
+        const webCheckbox = document.getElementById('webCheckbox');
+        const dataCheckbox = document.getElementById('dataCheckbox');
+        const hackCheckbox = document.getElementById('hackCheckbox');
+
+        appCheckbox.addEventListener('change', function () {
+
+            if (appCheckbox.checked) {
+                dataCheckbox.disabled = true;
+                alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
+            } else {
+                dataCheckbox.disabled = false;
+            }
+        });
+
+        dataCheckbox.addEventListener('change', function () {
+            if (webCheckbox.checked) {
+                appCheckbox.disabled = true;
+                alert("You can only join either 'APP' or 'DATA' as they both occur on the same day. Please be sure of your choice <3.");
+            } else {
+                appCheckbox.disabled = false;
+            }
+        });
+
+        hackCheckbox.addEventListener('change', function () {
+
+            if (hackCheckbox.checked) {
+                webCheckbox.disabled = true;
+                alert("You can only join either 'HackStreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
+            } else {
+                webCheckbox.disabled = false;
+            }
+        });
+
+        webCheckbox.addEventListener('change', function () {
+            if (webCheckbox.checked) {
+                hackCheckbox.disabled = true;
+                alert("You can only join either 'Hackstreet' or 'WEB' as they both occur on the same day. Please be sure of your choice <3.");
+            } else {
+                hackCheckbox.disabled = false;
+            }
+        });
+    </script>
 </body>
+
 </html>
