@@ -5,9 +5,48 @@ html {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background: linear-gradient(#213252, #243b55);
   }
   
+  .login-box form .tab-content > div:last-child {
+    display:none;
+  }
+
+
+
+  .tab-group {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin: 0 0 40px 0;
+    display: flex;
+  }
+  
+  .tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .tab-group li a {
+    display: block;
+    text-decoration: none;
+    /* padding: 30px; */
+    background: rgba(169, 169, 169, 0.25); /* Replace with your hex color for gray-light */
+    /* color: #a9a9a9; Replace with your hex color for gray-light */
+    font-size: 20px; 
+    /* float: left; */
+    width: 60%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .tab-group .active a {
+    background: #007bff; /* Replace with your hex color for main */
+    color: #fff; /* Replace with your hex color for white */
+  }
+
   .login-box {
     position: absolute;
     top: 50%;
@@ -36,7 +75,7 @@ html {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: #6bead4de;
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -48,8 +87,8 @@ html {
     top:0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
+    font-size: 14px;
+    color: #ffffffdd;
     pointer-events: none;
     transition: .5s;
   }
@@ -134,9 +173,9 @@ html {
   .login-box form a {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 23px; 
     color: #03e9f4;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
