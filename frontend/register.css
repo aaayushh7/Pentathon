@@ -56,7 +56,7 @@ body {
   top: 50%;
   left: 50%;
   width: 400px;
-  /* height: 130%; */
+  height: auto;
   padding: 40px;
   transform: translate(-50%, -50%);
   /* background: rgba(0, 0, 0, .5); */
@@ -73,9 +73,13 @@ body {
 
 @media (max-width: 768px) {
   .login-box {
-    height: 140%;
-    top: 68%;
-    /* margin-bottom: 20px; */
+    margin-top: 50px;
+    max-height: 130vh;
+    padding-bottom: 50px;
+    width: 95%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
