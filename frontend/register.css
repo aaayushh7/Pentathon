@@ -9,6 +9,7 @@ body {
   font-family: sans-serif;
   /* background: linear-gradient(#213252, #243b55); */
   background: url('assets/7636213_3607424.jpg') center/cover;
+  overflow: hidden;
 }
 
 .login-box form .tab-content>div:last-child {
@@ -51,6 +52,12 @@ body {
   color: #fff;
 }
 
+div.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
 .login-box {
   position: absolute;
   top: 50%;
@@ -69,12 +76,22 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.login-box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.login-box::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
   .login-box {
-    margin-top: 50px;
-    max-height: 130vh;
+    max-height: 70vh;
     padding-bottom: 50px;
     width: 95%;
     top: 60%;
