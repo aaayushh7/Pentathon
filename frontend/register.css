@@ -1,11 +1,11 @@
 html {
-  height: 120%;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 110%;
+  height: 100%;
   font-family: sans-serif;
   /* background: linear-gradient(#213252, #243b55); */
   background: url('assets/7636213_3607424.jpg') center/cover;
