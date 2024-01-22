@@ -16,6 +16,37 @@ body {
   display: none;
 }
 
+.tab-content.hidden {
+  display: none;
+}
+
+.tab-content p {
+  color: white;
+  list-style: none;
+  position: relative;
+}
+
+.tab-content img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.tab-content h3 {
+  margin: 40px;
+  color: white;
+  text-align: center;
+  font-size: 27px;
+}
+
+.or {
+  text-align: center;
+}
+
+.payment p:before {
+  content: "\00BB"; 
+  text-align: center;
+  padding-right: 5px;
+}
 
 
 .tab-group {
