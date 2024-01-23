@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tektur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
 
@@ -1097,4 +1097,101 @@ html {
       transform: none;
       opacity: 0.25;
     }
+  }
+
+
+
+
+  .benefits {
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 30px;
+    background-image: url('assets/mainBg.jpg');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+
+    
+  }
+
+  .benefits h1 {
+    margin: 0;
+  }
+
+  .box {
+    width: 50%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .box1 {
+    width: 60%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .boxes1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: 769px) {
+    .box {
+      width: 48%;
+    }
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  @media (max-width: 768px) {
+    .box {
+      width: 95%;
+    }
+
+    .boxes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box1 {
+       width: 100%;
+    }
+  }
+
+  .fa-solid, .fas {
+    font-weight: 900;
+    font-size: 25px;
   }
