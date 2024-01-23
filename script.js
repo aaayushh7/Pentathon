@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
   registerButton.addEventListener("click", scrollToMainSection);
 });
 
-// DJ Page Popup
+// DJ-night Page Popup
 document.addEventListener('DOMContentLoaded', function () {
   var popup = document.getElementById('popup');
   var closeBtn = document.getElementById('close');
