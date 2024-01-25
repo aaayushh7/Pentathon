@@ -463,13 +463,12 @@
     });
 
     //dynamic fee for solo
-    function calculateRegistrationFee() {
+    function calculateRegistrationFee1() {
       const checkboxes = [
         appCheckbox1.checked,
         webCheckbox1.checked,
         dataCheckbox1.checked,
         hackCheckbox1.checked,
-        ideaCheckbox1.checked,
       ];
   
       const checkedCount = checkboxes.filter(checkbox => checkbox).length;
@@ -477,33 +476,34 @@
       let fee = 0
 
       if (checkedCount === 1) {
-        fee = 250;
+        fee += 250;
       } else if (checkedCount === 2) {
-        fee = 500;
+        fee += 500;
       } else if (checkedCount === 3) {
-        fee = 750;
+        fee += 750;
       } else if (checkedCount === 4) {
-        fee = 1000;
+        fee += 1000;
       }
 
 
       if (ideaCheckbox1.checked) {
         fee += 150;
       }
-      document.getElementById('registrationFee1').textContent = `Team Registration Fee: ₹${fee} per team`;
+      document.getElementById('registrationFee1').textContent = `Team Registration Fee: ₹${fee} for solo`;
       
     }
     [appCheckbox1, webCheckbox1, dataCheckbox1, hackCheckbox1, ideaCheckbox1].forEach(checkbox => {
-      checkbox.addEventListener('change', calculateRegistrationFee);
+      checkbox.addEventListener('change', calculateRegistrationFee1);
     });
 
-    function calculateRegistrationFee1() {
+    //dynamic fee for team
+
+    function calculateRegistrationFee() {
       const checkboxes = [
         appCheckbox.checked,
         webCheckbox.checked,
         dataCheckbox.checked,
         hackCheckbox.checked,
-        ideaCheckbox.checked,
       ];
   
       const checkedCount = checkboxes.filter(checkbox => checkbox).length;
@@ -511,13 +511,13 @@
       let fee = 0
 
       if (checkedCount === 1) {
-        fee = 250;
+        fee += 250;
       } else if (checkedCount === 2) {
-        fee = 500;
+        fee += 500;
       } else if (checkedCount === 3) {
-        fee = 750;
+        fee += 750;
       } else if (checkedCount === 4) {
-        fee = 1000;
+        fee += 1000;
       }
 
 
@@ -528,7 +528,7 @@
       
     }
     [appCheckbox, webCheckbox, dataCheckbox, hackCheckbox, ideaCheckbox].forEach(checkbox => {
-      checkbox.addEventListener('change', calculateRegistrationFee1);
+      checkbox.addEventListener('change', calculateRegistrationFee);
     });
 
 
