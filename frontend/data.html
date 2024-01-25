@@ -136,7 +136,7 @@
           <p>Acc No.: 117001001916247</p>
           <p>IFSC Code: CIUB0000117</p>
           <p>Branch: Tambaram</p>
-          <p>Individual Registration Fee: &#8377;150 per participant</p>
+          <p id="registrationFee1">Team Registration Fee: ₹ ♡ per team</p>
         </div>
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
@@ -329,7 +329,7 @@
           <p>Acc No.: 117001001916247</p>
           <p>IFSC Code: CIUB0000117</p>
           <p>Branch: Tambaram</p>
-          <p>Team Registration Fee: &#8377;350 per team</p>
+          <p id="registrationFee">Team Registration Fee: ₹ ♡ per team</p>
         </div>
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
@@ -355,6 +355,7 @@
   </div>
 
   <script>
+    
     $(document).ready(function () {
       $('.tab-group a').on('click', function (e) {
 
@@ -376,11 +377,14 @@
     const webCheckbox = document.getElementById('webCheckbox');
     const dataCheckbox = document.getElementById('dataCheckbox');
     const hackCheckbox = document.getElementById('hackCheckbox');
+    const ideaCheckbox = document.getElementById('ideaCheckbox')
 
     const appCheckbox1 = document.getElementById('appCheckbox1');
     const webCheckbox1 = document.getElementById('webCheckbox1');
     const dataCheckbox1 = document.getElementById('dataCheckbox1');
     const hackCheckbox1 = document.getElementById('hackCheckbox1');
+    const ideaCheckbox1 = document.getElementById('ideaCheckbox1')
+
 
     appCheckbox.addEventListener('change', function () {
 
@@ -457,6 +461,79 @@
         hackCheckbox1.disabled = false;
       }
     });
+
+    //dynamic fee for solo
+    function calculateRegistrationFee() {
+      const checkboxes = [
+        appCheckbox1.checked,
+        webCheckbox1.checked,
+        dataCheckbox1.checked,
+        hackCheckbox1.checked,
+        ideaCheckbox1.checked,
+      ];
+  
+      const checkedCount = checkboxes.filter(checkbox => checkbox).length;
+  
+      let fee = 350
+
+      if (checkedCount === 1) {
+        fee = 250;
+      } else if (checkedCount === 2) {
+        fee = 500;
+      } else if (checkedCount === 3) {
+        fee = 750;
+      } else if (checkedCount === 4) {
+        fee = 1000;
+      }
+
+
+      if (ideaCheckbox1.checked) {
+        fee += 150;
+      }
+      document.getElementById('registrationFee1').textContent = `Team Registration Fee: ₹${fee} per team`;
+      
+    }
+    [appCheckbox1, webCheckbox1, dataCheckbox1, hackCheckbox1, ideaCheckbox1].forEach(checkbox => {
+      checkbox.addEventListener('change', calculateRegistrationFee);
+    });
+
+    function calculateRegistrationFee1() {
+      const checkboxes = [
+        appCheckbox.checked,
+        webCheckbox.checked,
+        dataCheckbox.checked,
+        hackCheckbox.checked,
+        ideaCheckbox.checked,
+      ];
+  
+      const checkedCount = checkboxes.filter(checkbox => checkbox).length;
+  
+      let fee = 350
+
+      if (checkedCount === 1) {
+        fee = 250;
+      } else if (checkedCount === 2) {
+        fee = 500;
+      } else if (checkedCount === 3) {
+        fee = 750;
+      } else if (checkedCount === 4) {
+        fee = 1000;
+      }
+
+
+      if (ideaCheckbox.checked) {
+        fee += 150;
+      }
+      document.getElementById('registrationFee').textContent = `Team Registration Fee: ₹${fee} per team`;
+      
+    }
+    [appCheckbox, webCheckbox, dataCheckbox, hackCheckbox, ideaCheckbox].forEach(checkbox => {
+      checkbox.addEventListener('change', calculateRegistrationFee1);
+    });
+
+
+    
+
   </script>
 </body>
 
