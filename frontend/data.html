@@ -65,34 +65,34 @@
         <div id="unique">
           <div class="user-box">
             <input type="text" name="name" required>
-            <label>Name</label>
+            <label>Name*</label>
           </div>
           <div class="user-box">
             <input type="text" name="Whatsappno" required>
-            <label>Whatsapp no.</label>
+            <label>Whatsapp no.*</label>
           </div>
           <div class="user-box">
             <input type="text" name="email" required>
-            <label>SRMIST e-mail</label>
+            <label>SRMIST e-mail*</label>
           </div>
           <div class="user-box">
             <input type="text" name="registerNumber" required>
-            <label>Register Number</label>
+            <label>Register Number*</label>
           </div>
           <div class="user-box">
             <input type="text" name="Yearofstudy" required>
-            <label>Year of study</label>
+            <label>Year of study*</label>
           </div>
           <div class="user-box">
             <input type="text" name="department" required>
-            <label>Department</label>
+            <label>Department*</label>
           </div>
           <div class="user-box">
             <input type="text" name="FAname" required>
-            <label>FA name</label>
+            <label>FA name*</label>
             <div class="user-box">
               <input type="text" name="Section" required>
-              <label>Section</label>
+              <label>Section*</label>
             </div>
           </div>
           <div class="checkboxes">
@@ -336,7 +336,7 @@
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
         <div class="user-box">
-          <input type="text" name="TransactionIdteam" required>
+          <input type="text" name="TransactionIdteam">
           <label>Transaction Number/ID</label>
           <p>Upload screenshot of payment:</p>
           <div class="user-box">
@@ -813,11 +813,11 @@
           if (isSolo) {
            
             const soloFormData = collectSoloFormData();
-            sendDataToServer(soloFormData, "http://52.66.212.51:80/solohandler");
+            sendDataToServer(soloFormData, "https://52.66.212.51:80/solohandler");
           } else {
           
             const teamFormData = collectTeamFormData();
-            sendDataToServer(teamFormData, "http://52.66.212.51:80/teamhandler");
+            sendDataToServer(teamFormData, "https://52.66.212.51:80/teamhandler");
           }
       
           
