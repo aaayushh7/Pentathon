@@ -56,7 +56,7 @@
   
   <div class="login-box scroll">
     <h2>Event Registration</h2>
-    <form>
+    <form id="myForm">
       <ul class="tab-group">
         <li class="tab"><a href="#Team">Team</a></li>
         <li class="tab" id="in"><a href="#unique">Solo</a></li>
@@ -139,8 +139,7 @@
           <p>Acc No.: 117001001916247</p>
           <p>IFSC Code: CIUB0000117</p>
           <p>Branch: Tambaram</p>
-          <p>Individual Registration Fee: &#8377;150 per participant</p>
-        </div>
+          <p id="registrationFee1">Team Registration Fee: ₹ ♡ per team</p>        </div>
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
         <div class="user-box">
@@ -347,7 +346,7 @@
         </div>
         </div>
       </div>
-      <a href="#" id="submitBtn" onclick="showAlert()">
+      <a href="#" id="submitBtn">
         <span></span>
         <span></span>
         <span></span>
@@ -358,10 +357,6 @@
   </div>
 
   <script>
-
-    function showAlert() {
-      alert("User registered");
-    }
     
     let isSolo = true; // Default to solo
     let isTeam = false; // Default to not a team
@@ -490,13 +485,13 @@
       let fee = 0
 
       if (checkedCount === 1) {
-        fee += 250;
+        fee += 150;
       } else if (checkedCount === 2) {
-        fee += 500;
+        fee += 300;
       } else if (checkedCount === 3) {
-        fee += 750;
+        fee += 450;
       } else if (checkedCount === 4) {
-        fee += 1000;
+        fee += 650;
       }
 
 
