@@ -10,8 +10,6 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
-
 <style>
   .spinner {
     background-color: rgb(0, 0, 0) !important;
@@ -45,6 +43,7 @@
   }, 7000);
 
 </script>
+
 <body>
   <div id="spinner" class="spinner">
 
@@ -53,7 +52,7 @@
 
   </div>
 
-  
+
   <div class="login-box scroll">
     <h2>Event Registration</h2>
     <form id="myForm">
@@ -131,26 +130,27 @@
               </label>
               <p style="color: azure; font-size: 14px;">HackStr</p>
             </div>
-          </div> 
+          </div>
           <div class="payment">
-          <h3>Payment</h3>
-          <p>Bank Name: City Union Bank</p>
-          <p>Account Name: SWEA</p>
-          <p>Acc No.: 117001001916247</p>
-          <p>IFSC Code: CIUB0000117</p>
-          <p>Branch: Tambaram</p>
-          <p id="registrationFee1">Team Registration Fee: ₹ ♡ per team</p>        </div>
+            <h3>Payment</h3>
+            <p>Bank Name: City Union Bank</p>
+            <p>Account Name: SWEA</p>
+            <p>Acc No.: 117001001916247</p>
+            <p>IFSC Code: CIUB0000117</p>
+            <p>Branch: Tambaram</p>
+            <p id="registrationFee1">Team Registration Fee: ₹ ♡ per team</p>
+          </div>
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
-        <div class="user-box">
-          <input type="text" name="transistionid" required="">
-          <label>Transaction Number/ID</label>
-          <p>Upload screenshot of payment:</p>
           <div class="user-box">
+            <input type="text" name="transistionid" required="">
+            <label>Transaction Number/ID</label>
+            <p>Upload screenshot of payment:</p>
+            <div class="user-box">
               <label for="paymentScreenshot"></label>
               <input type="file" id="paymentScreenshot" name="paymentScreenshot" accept="image/*" required="">
             </div>
-        </div>
+          </div>
         </div>
       </div>
       <div class="tab-content">
@@ -325,25 +325,25 @@
             </div>
           </div>
           <div class="payment">
-          <h3>Payment</h3>
-          <p>Bank Name: City Union Bank</p>
-          <p>Account Name: SWEA</p>
-          <p>Acc No.: 117001001916247</p>
-          <p>IFSC Code: CIUB0000117</p>
-          <p>Branch: Tambaram</p>
-          <p id="registrationFee">Team Registration Fee: ₹ ♡ per team</p>
-        </div>
+            <h3>Payment</h3>
+            <p>Bank Name: City Union Bank</p>
+            <p>Account Name: SWEA</p>
+            <p>Acc No.: 117001001916247</p>
+            <p>IFSC Code: CIUB0000117</p>
+            <p>Branch: Tambaram</p>
+            <p id="registrationFee">Team Registration Fee: ₹ ♡ per team</p>
+          </div>
           <p class="or">OR</p>
           <img src="assets/qr.jpg" alt="QR Code">
-        <div class="user-box">
-          <input type="text" name="TransactionIdteam">
-          <label>Transaction Number/ID</label>
-          <p>Upload screenshot of payment:</p>
           <div class="user-box">
+            <input type="text" name="TransactionIdteam">
+            <label>Transaction Number/ID</label>
+            <p>Upload screenshot of payment:</p>
+            <div class="user-box">
               <label for="paymentScreenshot"></label>
               <input type="file" id="paymentScreenshott" name="paymentScreenshott" accept="image/*" required>
             </div>
-        </div>
+          </div>
         </div>
       </div>
       <a href="#" id="submitBtn">
@@ -357,30 +357,30 @@
   </div>
 
   <script>
-    
+
     let isSolo = true; // Default to solo
     let isTeam = false; // Default to not a team
     let imageUrl = "";
-  
+
     $(document).ready(function () {
       $('.tab-group a').on('click', function (e) {
         e.preventDefault();
-  
+
         $(this).parent().addClass('active');
         $(this).parent().siblings().removeClass('active');
-  
+
         target = $(this).attr('href');
-  
+
         $('.tab-content > div').not(target).hide();
-  
+
         $(target).fadeIn(600);
-  
-      
+
+
         isSolo = (target === '#unique');
         isTeam = (target === '#Team');
       });
     });
-  
+
 
     const appCheckbox = document.getElementById('appCheckbox');
     const webCheckbox = document.getElementById('webCheckbox');
@@ -479,9 +479,9 @@
         dataCheckbox1.checked,
         hackCheckbox1.checked,
       ];
-  
+
       const checkedCount = checkboxes.filter(checkbox => checkbox).length;
-  
+
       let fee = 0
 
       if (checkedCount === 1) {
@@ -499,7 +499,7 @@
         fee += 150;
       }
       document.getElementById('registrationFee1').textContent = `Team Registration Fee: ₹${fee} for solo`;
-      
+
     }
     [appCheckbox1, webCheckbox1, dataCheckbox1, hackCheckbox1, ideaCheckbox1].forEach(checkbox => {
       checkbox.addEventListener('change', calculateRegistrationFee1);
@@ -514,9 +514,9 @@
         dataCheckbox.checked,
         hackCheckbox.checked,
       ];
-  
+
       const checkedCount = checkboxes.filter(checkbox => checkbox).length;
-  
+
       let fee = 0
 
       if (checkedCount === 1) {
@@ -534,7 +534,7 @@
         fee += 150;
       }
       document.getElementById('registrationFee').textContent = `Team Registration Fee: ₹${fee} per team`;
-      
+
     }
     [appCheckbox, webCheckbox, dataCheckbox, hackCheckbox, ideaCheckbox].forEach(checkbox => {
       checkbox.addEventListener('change', calculateRegistrationFee);
@@ -543,287 +543,287 @@
 
 
     function collectSoloFormData() {
-        var name = document.getElementsByName('name')[0].value;
-        var whatsappNo = document.getElementsByName('Whatsappno')[0].value;
-        var email = document.getElementsByName('email')[0].value;
-        var registerNumber = document.getElementsByName('registerNumber')[0].value;
-        var yearOfStudy = document.getElementsByName('Yearofstudy')[0].value;
-        var department = document.getElementsByName('department')[0].value;
-        var faName = document.getElementsByName('FAname')[0].value;
-        var section = document.getElementsByName('Section')[0].value;
-    
-        var appCheckbox1 = document.getElementById('appCheckbox1').checked;
-        var webCheckbox1 = document.getElementById('webCheckbox1').checked;
-        var dataCheckbox1 = document.getElementById('dataCheckbox1').checked;
-        var ideaCheckbox1 = document.getElementById('ideaCheckbox1').checked;
-        var hackCheckbox1 = document.getElementById('hackCheckbox1').checked;
-    
-        var transistionId = document.getElementsByName('transistionid')[0].value;
-    
-        
-        var paymentScreenshotInput = document.getElementById('paymentScreenshot');
-       
-        var paymentScreenshotFile = paymentScreenshotInput.files[0];
-    
-       
-        return {
-          name,
-                  whatsappNo,
-                  email,
-                  registerNumber,
-                  yearOfStudy,
-                  department,
-                  faName,
-                  section,
-                  appCheckbox1,
-                  webCheckbox1,
-                  dataCheckbox1,
-                  ideaCheckbox1,
-                  hackCheckbox1,
-                  transistionId,
-                  imageUrl
-            
-          
+      var name = document.getElementsByName('name')[0].value;
+      var whatsappNo = document.getElementsByName('Whatsappno')[0].value;
+      var email = document.getElementsByName('email')[0].value;
+      var registerNumber = document.getElementsByName('registerNumber')[0].value;
+      var yearOfStudy = document.getElementsByName('Yearofstudy')[0].value;
+      var department = document.getElementsByName('department')[0].value;
+      var faName = document.getElementsByName('FAname')[0].value;
+      var section = document.getElementsByName('Section')[0].value;
+
+      var appCheckbox1 = document.getElementById('appCheckbox1').checked;
+      var webCheckbox1 = document.getElementById('webCheckbox1').checked;
+      var dataCheckbox1 = document.getElementById('dataCheckbox1').checked;
+      var ideaCheckbox1 = document.getElementById('ideaCheckbox1').checked;
+      var hackCheckbox1 = document.getElementById('hackCheckbox1').checked;
+
+      var transistionId = document.getElementsByName('transistionid')[0].value;
+
+
+      var paymentScreenshotInput = document.getElementById('paymentScreenshot');
+
+      var paymentScreenshotFile = paymentScreenshotInput.files[0];
+
+
+      return {
+        name,
+        whatsappNo,
+        email,
+        registerNumber,
+        yearOfStudy,
+        department,
+        faName,
+        section,
+        appCheckbox1,
+        webCheckbox1,
+        dataCheckbox1,
+        ideaCheckbox1,
+        hackCheckbox1,
+        transistionId,
+        imageUrl
+
+
       };
     }
-      
-        function collectTeamFormData() {
-          var teamName = document.getElementsByName('teamname')[0].value;
-          var nameLead = document.getElementsByName('namelead')[0].value;
-          var registerNumberLead = document.getElementsByName('registerNumberlead')[0].value;
-          var emailLead = document.getElementsByName('emaillead')[0].value;
-          var yearLead = document.getElementsByName('yearlead')[0].value;
-          var departmentLead = document.getElementsByName('departmentlead')[0].value;
-          var leadSection = document.getElementsByName('leadsection')[0].value;
-          var whatsappNoLead = document.getElementsByName('whatappnolead')[0].value;
-          var faLead = document.getElementsByName('FAlead')[0].value;
-      
-          var name1 = document.getElementsByName('name1')[0].value;
-          var registerNumber1 = document.getElementsByName('registerNumber1')[0].value;
-          var email1 = document.getElementsByName('email1')[0].value;
-          var year1 = document.getElementsByName('year1')[0].value;
-          var department1 = document.getElementsByName('department1')[0].value;
-          var section1 = document.getElementsByName('section1')[0].value;
-          var whatsappNo1 = document.getElementsByName('whatapp1')[0].value;
-          var fa1 = document.getElementsByName('FA1')[0].value;
-      
-          var name2 = document.getElementsByName('name2')[0].value;
-          var registerNumber2 = document.getElementsByName('registerNumber2')[0].value;
-          var email2 = document.getElementsByName('email2')[0].value;
-          var year2 = document.getElementsByName('year2')[0].value;
-          var department2 = document.getElementsByName('departmen2')[0].value;
-          var section2 = document.getElementsByName('section2')[0].value;
-          var whatsappNo2 = document.getElementsByName('whatapp2')[0].value;
-          var faName2 = document.getElementsByName('FAname2')[0].value;
-      
-          var name3 = document.getElementsByName('name3')[0].value;
-          var registrationNo3 = document.getElementsByName('registrationno3')[0].value;
-          var email3 = document.getElementsByName('email3')[0].value;
-          var year3 = document.getElementsByName('year3')[0].value;
-          var department3 = document.getElementsByName('department3')[0].value;
-          var section3 = document.getElementsByName('section3')[0].value;
-          var whatsappNo3 = document.getElementsByName('whatapp3')[0].value;
-          var faName3 = document.getElementsByName('Faname3')[0].value;
-      
-          var appCheckbox = document.getElementById('appCheckbox').checked;
-          var webCheckbox = document.getElementById('webCheckbox').checked;
-          var dataCheckbox = document.getElementById('dataCheckbox').checked;
-          var ideaCheckbox = document.getElementById('ideaCheckbox').checked;
-          var hackCheckbox = document.getElementById('hackCheckbox').checked;
-    
-          var transistionIdt = document.getElementsByName('TransactionIdteam')[0].value;
-          var paymentScreenshotInputt= document.getElementById('paymentScreenshott');
-          var paymentScreenshotFilet = paymentScreenshotInputt.files[0];
-      
-          return {
-            teamName,
-            nameLead,
-            registerNumberLead,
-            emailLead,
-            yearLead,
-            departmentLead,
-            leadSection,
-            whatsappNoLead,
-            faLead,
-            name1,
-            registerNumber1,
-            email1,
-            year1,
-            department1,
-            section1,
-            whatsappNo1,
-            fa1,
-            name2,
-            registerNumber2,
-            email2,
-            year2,
-            department2,
-            section2,
-            whatsappNo2,
-            faName2,
-            name3,
-            registrationNo3,
-            email3,
-            year3,
-            department3,
-            section3,
-            whatsappNo3,
-            faName3,
-            appCheckbox,
-            webCheckbox,
-            dataCheckbox,
-            ideaCheckbox,
-            hackCheckbox,
-            transistionIdt,
-            imageUrl
-          
-    
-    
-        };
-        
-        }
-      
-        function sendDataToServer(formData, endpoint) {
-          const myHeaders = new Headers();
-          myHeaders.append("Content-Type", "application/json");
-        
-          const data = Object.values(formData);
-          
-          const raw = JSON.stringify({
-            data: [data],
-          });
-        
-          const requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow',
-          };
-        
-          fetch(endpoint, requestOptions)
-            .then(response => response.text())
-            .then(result => {
-              console.log(result);
-            
-            })
-            .catch(error => {
-              console.log('error', error);
-             
-            });
-        }
-        
-    
-    async function uploadImage(file) {
-    
-                try {
-                  document.getElementById('spinner').style.display = 'block';
-                    const formData = new FormData();
-                    formData.append('source', file);
-    
-                    const response = await fetch('http://52.66.212.51:80/image', {
-                        method: 'POST',
-                        body: formData
-                    });
-    
-                    const responseData = await response.json();
-                     document.getElementById('spinner').style.display = 'none';
-                    imageUrl = responseData.url;
-                    console.log('Response:', responseData);
-                    
-                } catch (error) {
-                    console.error('Error uploading image:', error);
-                     document.getElementById('spinner').style.display = 'none';
-                }
-            }
-    
-           
-            const fileInput = document.getElementById('paymentScreenshot');
-            const fileInput2 = document.getElementById('paymentScreenshott');
-           
-            fileInput.addEventListener('change', (event) => {
-                const file = event.target.files[0];
-    
-                if (file) {
-                  
-                    uploadImage(file);
-                    Swal.fire({
-                        title: "Hold your horses!",
-                        html: "Your artistic masterpiece is sprinting to our servers <b></b> ",
-                        timer: 2000,
-                        timerProgressBar: true,
-                        didOpen: () => {
-                            Swal.showLoading();
-                            const timer = Swal.getPopup().querySelector("b");
-                            timerInterval = setInterval(() => {
-                            timer.textContent = `${Swal.getTimerLeft()}`;
-                            }, 100);
-                        },
-                        willClose: () => {
-                            clearInterval(timerInterval);
-                        }
-                        }).then((result) => {
-                        /* Read more about handling dismissals below */
-                        if (result.dismiss === Swal.DismissReason.timer) {
-                            console.log("I was closed by the timer");
-                        }
-                        });
-                }
-            });
-    
-            fileInput2.addEventListener('change', (event) => {
-              const file = event.target.files[0];
-    
-              if (file) {
-                  
-                  uploadImage(file);
-                  Swal.fire({
-                    title: "Hold your horses!",
-                    html: "Your artistic masterpiece is sprinting to our servers <b></b> ",
-                    timer: 2000,
-                    timerProgressBar: true,
-                    didOpen: () => {
-                        Swal.showLoading();
-                        const timer = Swal.getPopup().querySelector("b");
-                        timerInterval = setInterval(() => {
-                        timer.textContent = `${Swal.getTimerLeft()}`;
-                        }, 100);
-                    },
-                    willClose: () => {
-                        clearInterval(timerInterval);
-                    }
-                    }).then((result) => {
-                    /* Read more about handling dismissals below */
-                    if (result.dismiss === Swal.DismissReason.timer) {
-                        console.log("I was closed by the timer");
-                    }
-                    });
-              }
-          });
-    
-      
-        document.getElementById('submitBtn').addEventListener('click', function submitHandler(e) {
-          e.preventDefault();
-          console.log('Submit button clicked');
-      
-         
-          var soloTab = document.getElementById('in');
-          var isSolo = soloTab.classList.contains('active'); 
-      
-         
-          if (isSolo) {
-           
-            const soloFormData = collectSoloFormData();
-            sendDataToServer(soloFormData, "https://52.66.212.51:80/solohandler");
-          } else {
-          
-            const teamFormData = collectTeamFormData();
-            sendDataToServer(teamFormData, "https://52.66.212.51:80/teamhandler");
-          }
-      
-          
-          this.removeEventListener('click', submitHandler);
+
+    function collectTeamFormData() {
+      var teamName = document.getElementsByName('teamname')[0].value;
+      var nameLead = document.getElementsByName('namelead')[0].value;
+      var registerNumberLead = document.getElementsByName('registerNumberlead')[0].value;
+      var emailLead = document.getElementsByName('emaillead')[0].value;
+      var yearLead = document.getElementsByName('yearlead')[0].value;
+      var departmentLead = document.getElementsByName('departmentlead')[0].value;
+      var leadSection = document.getElementsByName('leadsection')[0].value;
+      var whatsappNoLead = document.getElementsByName('whatappnolead')[0].value;
+      var faLead = document.getElementsByName('FAlead')[0].value;
+
+      var name1 = document.getElementsByName('name1')[0].value;
+      var registerNumber1 = document.getElementsByName('registerNumber1')[0].value;
+      var email1 = document.getElementsByName('email1')[0].value;
+      var year1 = document.getElementsByName('year1')[0].value;
+      var department1 = document.getElementsByName('department1')[0].value;
+      var section1 = document.getElementsByName('section1')[0].value;
+      var whatsappNo1 = document.getElementsByName('whatapp1')[0].value;
+      var fa1 = document.getElementsByName('FA1')[0].value;
+
+      var name2 = document.getElementsByName('name2')[0].value;
+      var registerNumber2 = document.getElementsByName('registerNumber2')[0].value;
+      var email2 = document.getElementsByName('email2')[0].value;
+      var year2 = document.getElementsByName('year2')[0].value;
+      var department2 = document.getElementsByName('departmen2')[0].value;
+      var section2 = document.getElementsByName('section2')[0].value;
+      var whatsappNo2 = document.getElementsByName('whatapp2')[0].value;
+      var faName2 = document.getElementsByName('FAname2')[0].value;
+
+      var name3 = document.getElementsByName('name3')[0].value;
+      var registrationNo3 = document.getElementsByName('registrationno3')[0].value;
+      var email3 = document.getElementsByName('email3')[0].value;
+      var year3 = document.getElementsByName('year3')[0].value;
+      var department3 = document.getElementsByName('department3')[0].value;
+      var section3 = document.getElementsByName('section3')[0].value;
+      var whatsappNo3 = document.getElementsByName('whatapp3')[0].value;
+      var faName3 = document.getElementsByName('Faname3')[0].value;
+
+      var appCheckbox = document.getElementById('appCheckbox').checked;
+      var webCheckbox = document.getElementById('webCheckbox').checked;
+      var dataCheckbox = document.getElementById('dataCheckbox').checked;
+      var ideaCheckbox = document.getElementById('ideaCheckbox').checked;
+      var hackCheckbox = document.getElementById('hackCheckbox').checked;
+
+      var transistionIdt = document.getElementsByName('TransactionIdteam')[0].value;
+      var paymentScreenshotInputt = document.getElementById('paymentScreenshott');
+      var paymentScreenshotFilet = paymentScreenshotInputt.files[0];
+
+      return {
+        teamName,
+        nameLead,
+        registerNumberLead,
+        emailLead,
+        yearLead,
+        departmentLead,
+        leadSection,
+        whatsappNoLead,
+        faLead,
+        name1,
+        registerNumber1,
+        email1,
+        year1,
+        department1,
+        section1,
+        whatsappNo1,
+        fa1,
+        name2,
+        registerNumber2,
+        email2,
+        year2,
+        department2,
+        section2,
+        whatsappNo2,
+        faName2,
+        name3,
+        registrationNo3,
+        email3,
+        year3,
+        department3,
+        section3,
+        whatsappNo3,
+        faName3,
+        appCheckbox,
+        webCheckbox,
+        dataCheckbox,
+        ideaCheckbox,
+        hackCheckbox,
+        transistionIdt,
+        imageUrl
+
+
+
+      };
+
+    }
+
+    function sendDataToServer(formData, endpoint) {
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      const data = Object.values(formData);
+
+      const raw = JSON.stringify({
+        data: [data],
+      });
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow',
+      };
+
+      fetch(endpoint, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result);
+
+        })
+        .catch(error => {
+          console.log('error', error);
+
         });
-    
+    }
+
+
+    async function uploadImage(file) {
+
+      try {
+        document.getElementById('spinner').style.display = 'block';
+        const formData = new FormData();
+        formData.append('source', file);
+
+        const response = await fetch('http://52.66.212.51:80/image', {
+          method: 'POST',
+          body: formData
+        });
+
+        const responseData = await response.json();
+        document.getElementById('spinner').style.display = 'none';
+        imageUrl = responseData.url;
+        console.log('Response:', responseData);
+
+      } catch (error) {
+        console.error('Error uploading image:', error);
+        document.getElementById('spinner').style.display = 'none';
+      }
+    }
+
+
+    const fileInput = document.getElementById('paymentScreenshot');
+    const fileInput2 = document.getElementById('paymentScreenshott');
+
+    fileInput.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+
+      if (file) {
+
+        uploadImage(file);
+        Swal.fire({
+          title: "Hold your horses!",
+          html: "Your artistic masterpiece is sprinting to our servers <b></b> ",
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+              timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+          }
+        });
+      }
+    });
+
+    fileInput2.addEventListener('change', (event) => {
+      const file = event.target.files[0];
+
+      if (file) {
+
+        uploadImage(file);
+        Swal.fire({
+          title: "Hold your horses!",
+          html: "Your artistic masterpiece is sprinting to our servers <b></b> ",
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+              timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+          }
+        });
+      }
+    });
+
+
+    document.getElementById('submitBtn').addEventListener('click', function submitHandler(e) {
+      e.preventDefault();
+      console.log('Submit button clicked');
+
+
+      var soloTab = document.getElementById('in');
+      var isSolo = soloTab.classList.contains('active');
+
+
+      if (isSolo) {
+
+        const soloFormData = collectSoloFormData();
+        sendDataToServer(soloFormData, "https://52.66.212.51:80/solohandler");
+      } else {
+
+        const teamFormData = collectTeamFormData();
+        sendDataToServer(teamFormData, "https://52.66.212.51:80/teamhandler");
+      }
+
+
+      this.removeEventListener('click', submitHandler);
+    });
+
 
   </script>
 </body>
